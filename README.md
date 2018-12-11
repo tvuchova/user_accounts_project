@@ -8,7 +8,7 @@ git clone https://github.com/tvuchova/user_accounts_project.git
 cd user_accounts_project/user_accounts_rest
 gradle bootRun
 
-<br><br>
+<br>
 <b>Frontend</b><br>
 cd user_accounts_project/accounts_frontend
 npm install && npm start
