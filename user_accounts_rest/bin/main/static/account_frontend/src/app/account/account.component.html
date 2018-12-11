@@ -1,0 +1,33 @@
+<H1>Account</H1>
+
+<div class="container">
+    <div class="alert alert-warning" *ngIf="accountForm.dirty && accountForm.invalid">Enter valid values</div>
+    <div class="alert alert-warning" *ngIf="accountForm.dirty && birthDate.invalid">Enter valid Birth Date</div>
+    <div class="alert alert-warning" *ngIf="accountForm.dirty && email.invalid">Enter valid email</div>
+
+    <form (ngSubmit)="!accountForm.invalid && saveAccount()" #accountForm="ngForm">
+        <fieldset class="form-group">
+            <label>First Name</label>
+            <input type="text" #firstName="ngModel" [(ngModel)]="account.firstName" class="form-control" name="firstName"
+                required="required" minlength="2">
+        </fieldset>
+        <fieldset class="form-group">
+            <label>Last Name</label>
+            <input type="text" #lastName="ngModel" [(ngModel)]="account.lastName" class="form-control" name="lastName"
+                required="required" minlength="2">
+        </fieldset>
+        <fieldset class="form-group">
+            <label>Email</label>
+            <input type="email" #email="ngModel" [(ngModel)]="account.email" class="form-control" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                name="email" required="required" ngModel [email]="true">
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label>Birth Date</label>
+            <input type="date" #birthDate="ngModel" [ngModel]="account.birthDate | date:'yyyy-MM-dd' " (ngModelChange)="account.birthDate = $event"
+                class="form-control" name="birthDate" required="required">
+        </fieldset>
+
+        <button type="submit" class="btn btn-success">Save</button>
+    </form>
+</div>

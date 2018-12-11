@@ -1,0 +1,24 @@
+
+<H1>Welcome!</H1>
+
+<div class="container">
+  Welcome {{name}}. You can manage your user accounts <a routerLink="/accounts">here</a>
+</div><br><br>
+<div class="container">
+    Click here for more information
+    <button (click)="getWelcomeMessageWithParameter()" class="btn btn-success">Get more information</button>
+  </div>
+
+  <div class="container" *ngIf="welcomeMessageFromService">
+      <h2>{{welcomeMessageFromService}}</h2>
+      Welcome to this demo application!It's a small web application that manages user accounts in a database.<br> The application has the
+      following functionality: <br><br>
+      <ul class="list-group">
+          <li class="list-group-item"> A list page that shows all user accounts in a sortable grid. </li>
+          <li class="list-group-item"> You can create new account dialog that adds new accounts to the database.</li>
+          <li class="list-group-item"> The following properties are supported: First name,Last name,Email address,Date of birth</li>
+          <li class="list-group-item"> A Delete account dialog that removes accounts from the database. </li>
+          <li class="list-group-item"> An Edit account dialog that allows to change account data of existing accounts.</li>
+        </ul>
+    </div>
+ 

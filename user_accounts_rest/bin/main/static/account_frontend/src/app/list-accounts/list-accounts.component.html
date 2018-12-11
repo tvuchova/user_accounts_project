@@ -1,0 +1,56 @@
+<h1>Accounts</h1>
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-0 col-sm-offset-0">
+      <div class="input-group stylish-input-group">
+        <input class="form-control" name="search" type="text" align="left" [(ngModel)]="term">
+        <span class="input-group-addon">
+
+          <span class="glyphicon glyphicon-search"></span>
+
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th (click)="sort('id')">id
+            <span class="glyphicon sort-icon" *ngIf="key =='id'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+          </th>
+          <th (click)="sort('firstName')">firstName
+            <span class="glyphicon sort-icon" *ngIf="key =='firstName'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+          </th>
+          <th (click)="sort('lastName')">lastName
+            <span class="glyphicon sort-icon" *ngIf="key =='lastName'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+          </th>
+          <th>email</th>
+          <th (click)="sort('birthDate')">birthDate
+            <span class="glyphicon sort-icon" *ngIf="key =='birthDate'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+          </th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let account of accounts  | orderBy: key : reverse |filter:term| paginate: { itemsPerPage: 5, currentPage: p }">
+          <td>{{account.id}}</td>
+          <td>{{account.firstName}}</td>
+          <td>{{account.lastName}}</td>
+          <td>{{account.email}}</td>
+          <td>{{account.birthDate | date:'yyyy-MM-dd'|uppercase}}</td>
+          <td><button (click)="updateAccount(account.id)" class="btn btn-success">Update</button></td>
+          <td><button (click)="deleteAccount(account.id)" class="btn btn-warning">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row">
+    <button (click)="addAccount()" class="btn btn-success">Add</button>
+    <div class="col-sm-9 col-sm-offset-9">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+</div>

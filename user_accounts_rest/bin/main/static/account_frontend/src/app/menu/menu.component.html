@@ -1,0 +1,16 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><a href="https://github.com/tvuchova/" class="navbar-brand">
+                tvuchova</a></div>
+
+        <ul class="navbar-nav">
+            <li><a *ngIf="hardcodedAuthentificationService.isUserLoggedIn()" routerLink="/welcome/nushka" class="nav-link">Home</a></li>
+            <li><a *ngIf="hardcodedAuthentificationService.isUserLoggedIn()" routerLink="/accounts" class="nav-link">Accounts</a></li>
+        </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a *ngIf="!hardcodedAuthentificationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+            <li><a *ngIf="hardcodedAuthentificationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+        </ul>
+    </nav>
+</header>
