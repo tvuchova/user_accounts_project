@@ -4,15 +4,12 @@ Managing user accounts with MongoDB,REST and Angular
 To start the application
 git clone https://github.com/tvuchova/user_accounts_project.git
 
-Backend
+<b>Backend</b><br>
 cd user_accounts_project/user_accounts_rest
 gradle bootRun
 
-backend - user_accounts_rest
-gradle bootRun
-
-
-frontend
+<br><br>
+<b>Frontend</b>
 cd user_accounts_project/accounts_frontend
 npm install && npm start
 
