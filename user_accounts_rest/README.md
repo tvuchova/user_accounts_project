@@ -12,7 +12,8 @@ On localhost:4200 you may login with user nushka/dummy
 <b>MongoDB</b>
 username :accountManager,password:"manager"
 
-use springmongodb
+<div>
+ use springmongodb
 db.createUser(
    {
      user: "accountManager",
@@ -21,3 +22,4 @@ db.createUser(
    }
 )
 db.auth("accountManager", "manager")
+</div>
