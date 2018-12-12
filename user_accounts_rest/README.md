@@ -26,21 +26,21 @@ db.accounts.insertMany([
     "id"        :1001,
     "firstName" : "Spot",
     "lastName" : "Bulk",
-    "email" : "aaa@aaaa.com",
+    "email" : "spot@aaaa.com",
 	 "birthDate" : new Date(Date.now())
   },
   {
      "id"        :1002,
-    "firstName" : "Spot",
-    "lastName" : "Bulk",
-    "email" : "aaa@aaaa.com",
+    "firstName" : "Ivan",
+    "lastName" : "Petkov",
+    "email" : "bt@petkov.com",
 	 "birthDate" : new Date(Date.now())
   },
   {
      "id"        :1003,
-    "firstName" : "Spot",
-    "lastName" : "Bulk",
-    "email" : "aaa@aaaa.com",
+    "firstName" : "Stoqn",
+    "lastName" : "Ivanov",
+    "email" : "st@ivanov.com",
 	 "birthDate" : new Date(Date.now())
   }
 ]);
