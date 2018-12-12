@@ -11,6 +11,6 @@ gradle bootRun
 <br>
 <b>Frontend</b><br>
 cd user_accounts_project/accounts_frontend<br>
-npm install && npm start
+npm install && npm start<br><br>
 
 On localhost:4200 you may login with user nushka/dummy and manage user accounts add,update,delete
