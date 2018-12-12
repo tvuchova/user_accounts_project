@@ -19,31 +19,6 @@ db.createUser(
 )
 db.auth("accountManager", "manager")
 
-<br>
-If some test data are needed to be inserted(or will be inserted when pressed button Add)<br>
-db.accounts.insertMany([
-  {
-    "id"        :1001,
-    "firstName" : "Spot",
-    "lastName" : "Bulk",
-    "email" : "spot@aaaa.com",
-	 "birthDate" : new Date(Date.now())
-  },
-  {
-     "id"        :1002,
-    "firstName" : "Ivan",
-    "lastName" : "Petkov",
-    "email" : "bt@petkov.com",
-	 "birthDate" : new Date(Date.now())
-  },
-  {
-     "id"        :1003,
-    "firstName" : "Stoqn",
-    "lastName" : "Ivanov",
-    "email" : "st@ivanov.com",
-	 "birthDate" : new Date(Date.now())
-  }
-]);
-db.accounts.find();
+
 </pre></div>
 
