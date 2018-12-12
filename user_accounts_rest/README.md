@@ -19,8 +19,8 @@ db.createUser(
    }
 )
 db.auth("accountManager", "manager")
-
-To load some data in mongodb collection(if needed),or just with button Add
+<br>
+To load some data in mongodb collection(if needed),or just with button Add<br>
 db.accounts.insertMany([
   {
     "_id"        :1001,
