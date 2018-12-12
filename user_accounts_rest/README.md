@@ -8,7 +8,8 @@ to start: gradle bootRun
 <b>username</b>:accountManager,<b>password:</b>manager<br>
 <b>database</b> :springmongodb
 
-<div class="highlight highlight-text-xml"><pre>
+<div class="highlight highlight-text-xml">
+<pre>
 use springmongodb
 db.createUser(
    {
