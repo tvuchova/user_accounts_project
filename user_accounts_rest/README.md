@@ -5,6 +5,6 @@ gradle bootRun
 
 <b>MongoDB configs</b><br>
 
-username :accountManager,password:"manager"<br>
-database :springmongodb
+<b>username</b>:accountManager,password:"manager"<br>
+<b>database</b> :springmongodb
 
