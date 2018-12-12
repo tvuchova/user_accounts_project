@@ -18,6 +18,8 @@ db.createUser(
    }
 )
 db.auth("accountManager", "manager")
+
+If some test data are needed to be inserted(or will be inserted when pressed button Add)
 db.accounts.insertMany([
   {
     "id"        :1001,
