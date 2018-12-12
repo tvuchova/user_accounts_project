@@ -14,7 +14,7 @@ username :accountManager,password:"manager"
 
 <p>
  use springmongodb<br>
-db.createUser(<br>
+ db.createUser(<br>
    {<br>
      user: "accountManager",<br>
      pwd: "manager",<br>
