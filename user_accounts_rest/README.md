@@ -1,7 +1,7 @@
 
 
 This part is Backend <br>
-gradle bootRun
+to start: gradle bootRun
 
 <b>MongoDB configs</b><br>
 
