@@ -12,7 +12,7 @@ On localhost:4200 you may login with user nushka/dummy
 <b>MongoDB</b>
 username :accountManager,password:"manager"
 
-<div>
+<p>
  use springmongodb
 db.createUser(
    {
@@ -22,4 +22,4 @@ db.createUser(
    }
 )
 db.auth("accountManager", "manager")
-</div>
+</p>
