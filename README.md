@@ -13,4 +13,6 @@ gradle bootRun
 cd user_accounts_project/accounts_frontend<br>
 npm install && npm start<br><br>
 
+MongoDB config(see backend readme)
+
 On localhost:4200 you may login with user nushka/dummy and manage user accounts add,update,delete
