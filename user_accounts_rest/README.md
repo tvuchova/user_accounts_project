@@ -13,13 +13,13 @@ On localhost:4200 you may login with user nushka/dummy
 username :accountManager,password:"manager"
 
 <p>
- use springmongodb
-db.createUser(
-   {
-     user: "accountManager",
-     pwd: "manager",
-     roles: [ "readWrite", "dbAdmin" ]
-   }
-)
-db.auth("accountManager", "manager")
+ use springmongodb<br>
+db.createUser(<br>
+   {<br>
+     user: "accountManager",<br>
+     pwd: "manager",<br>
+     roles: [ "readWrite", "dbAdmin" ]<br>
+   }<br>
+)<br>
+db.auth("accountManager", "manager")<br>
 </p>
